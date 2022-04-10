@@ -24,7 +24,7 @@ public class PseudoQueue {
     private PseudoService pseudoService;
 
 
-    @PostMapping("/encryption")
+    @PostMapping("/encrypt")
     public ResponseEntity<ResponseDTO<EncryptionResponse>> encryptData(@RequestBody TransactionRequest transactionRequest) {
         logger.debug("Transaction Object : {}",transactionRequest.toString());
         ResponseDTO<EncryptionResponse> encryptedResponse = pseudoService.bringEncryptedResponse(transactionRequest);
