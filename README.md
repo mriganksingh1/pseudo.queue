@@ -78,5 +78,17 @@ curl --location --request POST 'http://localhost:8080/queue/api/v1/encryption' \
 * DATABASE_SAVING_FAILURE --> When there is an error in saving the data to the database.
 
 
+## HEROKU DEPLOYED PUBLIC CURL
+
+curl --location --request POST 'https://natwest-java.herokuapp.com/queue/api/v1/encryption' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "accountNumber": "123456789112",
+    "type": "credit",
+    "amount": "10000",
+    "currency" : "INR",
+    "accountFrom":"9756597885"
+}'
 
 
+* Verification can be done by pasting the response in the decryption API.
